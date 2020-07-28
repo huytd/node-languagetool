@@ -125,6 +125,12 @@
     text: text,
     language: locale.toString()
   });
+ 
+  const checkAnnotated = exports.check = (data, locale) => send({
+    command: "check",
+    data: data,
+    language: locale.toString()
+  });
 
   const languages = exports.languages = () => send({ command: "languages" });
 
